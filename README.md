@@ -22,8 +22,8 @@ Generates this script:
 	SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
 
 I made a few assumptions:
-- The procedure will have parameters. I can handle multiline and single line parameter lists. Output parameters are included in the generated scripts.
-- The parameter name can handle schema identifiers, brackets, and underscores.
+- The procedure will have parameters. It can handle multiline and single line parameter lists. Output parameters are included in the generated scripts.
+- The procedure name can contain schema identifiers, brackets, and underscores.
 - The procedure body must be surrounded by BEGIN … END statements. Our procedures are primarily multiple statements so this is not an issue.
 - Any stored procedure options are ignored.
 

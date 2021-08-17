@@ -1,5 +1,7 @@
 # debug-sql-transformer
 
+See the demo [here](https://ryanohs.github.io/demos/Transform.html).
+
 A project I work on has a very large number of stored procedures which contain most of the business logic. Debugging this application is difficult. The debug process we have is to copy the body of a stored procedure, create variables for every parameter, set them to values known from run time, and then executing the script in SSMS. You can hack this together by copying the procedure body from source code and using SSMS to generate an execution script for the procedure, and then gluing those together in a new script. But this is tedious.
 
 I created a simple website that generates the resulting script for you. After pasting in a stored procedure definition, it generates a script that you can run for debugging. Many of our procedures have common parameters that we can supply default values for when debugging so this website also substitutes the default values.
